@@ -10,25 +10,23 @@
                 <a href="{{ route('home') }}" class="btn btn-primary mx-2">Back to Home</a>
             </div>
         </div>
-        <div class="table-responsive">
-            <table class="table table-striped table-hover table-responsive">
-                <thead>
+        <table class="table table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                @foreach($mergedGuestbookData as $guestbookData)
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Message</th>
+                        <td>{{ $guestbookData['name'] }}</td>
+                        <td>{{ $guestbookData['email'] }}</td>
+                        <td>{{ $guestbookData['message'] }}</td>
                     </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                    @foreach($mergedGuestbookData as $guestbookData)
-                        <tr>
-                            <td>{{ $guestbookData['name'] }}</td>
-                            <td>{{ $guestbookData['email'] }}</td>
-                            <td>{{ $guestbookData['message'] }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection
