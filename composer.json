@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "alfikiafan/laravel-guestbook",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "This is a simple guestbook website created for a task.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
